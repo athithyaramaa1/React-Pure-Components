@@ -9,13 +9,13 @@ export default class RegularCompo extends Component {
       toggle: false,
     };
   }
-  toggleToggle = () => {
+  toggleCounter = () => {
     if (this.state.toggle == true) {
       this.setState({ ...this.state, count: this.state.count + 1 });
     }
   };
 
-  toggleCounter = () => {
+  toggleToggle = () => {
     this.setState({ ...this.state, toggle: !this.state.toggle });
   };
 
@@ -23,7 +23,7 @@ export default class RegularCompo extends Component {
     console.log("NormalCompo", this.state.count, this.state.toggle);
     return (
       <div>
-        <h1>PureComponent</h1>
+        <h1>RegularComponent</h1>
         <h2>{this.state.count}</h2>
         <br />
         <button onClick={this.toggleToggle}>Set TOggle</button>
